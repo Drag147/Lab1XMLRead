@@ -8,11 +8,15 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 
-
 public class Main {
 
     public static void main(String[] args) {
 
+
+    }
+
+    public static void ReadDOM()
+    {
         try
         {
             File fXmlFile = new File("1.xml");
