@@ -6,13 +6,31 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
-import java.io.File;
+import java.io.*;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        FileReader file = null;
+        Scanner scan = null;
+        try {
+            file = new FileReader("1.xml");
+            scan = new Scanner(file);
 
+            while (scan.hasNext())
+            {
+                System.out.println(scan.next());
+            }
+        }
+        catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+        finally {
+            try{scan.close();} catch (Exception e) {System.out.print(e.getMessage());}
+            try{file.close();} catch (Exception e) {System.out.print(e.getMessage());}
+        }
     }
 
     public static void ReadDOM()
