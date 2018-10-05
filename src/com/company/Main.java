@@ -53,7 +53,8 @@ public class Main {
             }
             else
             {
-                if(indStart1+1 < indEnd1 && indEnd1+1 < indStart2) {
+                if(indStart1+1 < indEnd1 && indEnd1+1 < indStart2)
+                {
                     String elemName = str.substring(indStart1 + 1, indEnd1);
                     if (elemName.equals("firstname")) {
                         user.setFirstname(str.substring(indEnd1 + 1, indStart2));
