@@ -21,14 +21,17 @@ public class Main {
             while (scan.hasNextLine())
             {
                 String tmp = findTag(scan.nextLine().trim(), user);
-                System.out.println(tmp);
+                if(!tmp.equals(""))
+                {
+                    System.out.println(tmp);
+                }
             }
         }
         catch (Exception e) {
             System.out.print(e.getMessage());
         }
 
-        System.out.println("\n\n-------------------------------------------\n");
+        System.out.println("\n-------------------------------------------\n");
 
         System.out.println("F:" + user.getFirstname());
         System.out.println("L:" + user.getLastname());
@@ -50,20 +53,23 @@ public class Main {
             }
             else
             {
-                String elemName = str.substring(indStart1+1, indEnd1);
-                if(elemName.equals("firstname"))
-                {
-                    user.setFirstname(str.substring(indEnd1+1, indStart2));
+                if(indStart1+1 < indEnd1 && indEnd1+1 < indStart2) {
+                    String elemName = str.substring(indStart1 + 1, indEnd1);
+                    if (elemName.equals("firstname")) {
+                        user.setFirstname(str.substring(indEnd1 + 1, indStart2));
+                    }
+                    if (elemName.equals("lastname")) {
+                        user.setLastname(str.substring(indEnd1 + 1, indStart2));
+                    }
+                    if (elemName.equals("nickname")) {
+                        user.setNickname(str.substring(indEnd1 + 1, indStart2));
+                    }
+                    return "Value: " + str.substring(indEnd1 + 1, indStart2);
                 }
-                if(elemName.equals("lastname"))
+                else
                 {
-                    user.setLastname(str.substring(indEnd1+1, indStart2));
+                    return "";
                 }
-                if(elemName.equals("nickname"))
-                {
-                    user.setNickname(str.substring(indEnd1+1, indStart2));
-                }
-                return "Value: "+str.substring(indEnd1+1, indStart2);
             }
         }
         else
