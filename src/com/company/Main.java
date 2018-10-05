@@ -11,26 +11,69 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static User user = new User();
+
     public static void main(String[] args) {
 
-        FileReader file = null;
-        Scanner scan = null;
-        try {
-            file = new FileReader("1.xml");
-            scan = new Scanner(file);
-
+        try(FileReader file = new FileReader("1.xml"); Scanner scan  = new Scanner(file))
+        {
             while (scan.hasNextLine())
             {
-                System.out.println(scan.nextLine());
+                String tmp = findTag(scan.nextLine().trim());
+                if(!tmp.equals(""))
+                {
+                    System.out.println(tmp);
+                }
             }
         }
         catch (Exception e) {
             System.out.print(e.getMessage());
         }
-        finally {
-            try{scan.close();} catch (Exception e) {System.out.print(e.getMessage());}
-            try{file.close();} catch (Exception e) {System.out.print(e.getMessage());}
+
+        System.out.println("-------------------------------------------");
+
+        System.out.println("F:" + user.getFirstname());
+        System.out.println("L:" + user.getLastname());
+        System.out.println("N:" + user.getNickname());
+    }
+
+    public static String findTag(String str)
+    {
+        int indStart1 = str.indexOf("<");
+        int indStart2 =  str.indexOf(">");
+        int indEnd1 = str.lastIndexOf("<");
+        int indEnd2 = str.lastIndexOf(">");
+        int indVopr = str.indexOf("?");
+        int indSlesh = str.indexOf("/");
+        if(indVopr==-1)
+        {
+            if (indStart1 == indEnd1 && indSlesh==-1)
+            {
+                return "Element: "+str.substring(indStart1+1, indStart2);
+            }
+            else
+            {
+                String elemName = str.substring(indStart1+1, indStart2);
+                if(elemName.equals("firstname"))
+                {
+                    user.setFirstname(str.substring(indStart2+1, indEnd1));
+                }
+                if(elemName.equals("lastname"))
+                {
+                    user.setLastname(str.substring(indStart2+1, indEnd1));
+                }
+                if(elemName.equals("nickname"))
+                {
+                    user.setNickname(str.substring(indStart2+1, indEnd1));
+                }
+                return "Value: "+str.substring(indStart2+1, indEnd1);
+            }
         }
+        if(indVopr!=-1)
+        {
+            return "Params";
+        }
+        return "";
     }
 
     public static void ReadDOM()
