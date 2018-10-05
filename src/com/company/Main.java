@@ -19,9 +19,9 @@ public class Main {
             file = new FileReader("1.xml");
             scan = new Scanner(file);
 
-            while (scan.hasNext())
+            while (scan.hasNextLine())
             {
-                System.out.println(scan.next());
+                System.out.println(scan.nextLine());
             }
         }
         catch (Exception e) {
