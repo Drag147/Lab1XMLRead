@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6afbd5c2-253e-48d0-8f78-782895aa2c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="6afbd5c2-253e-48d0-8f78-782895aa2c2d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,29 +58,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="java" value="2" />
-          <entry key="xml" value="2" />
+          <entry key="xml" value="3" />
           <entry key="xsd" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="JAVA" value="2" />
-          <entry key="XML" value="5" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="860" />
-          <entry key="txt" value="73" />
+          <entry key="java" value="877" />
+          <entry key="txt" value="89" />
           <entry key="xml" value="25" />
           <entry key="xsd" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="860" />
-          <entry key="PLAIN_TEXT" value="73" />
+          <entry key="JAVA" value="877" />
+          <entry key="PLAIN_TEXT" value="89" />
           <entry key="XML" value="72" />
         </counts>
       </usages-collector>
@@ -147,8 +145,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="341">
+              <caret line="61" column="80" lean-forward="true" selection-start-line="61" selection-start-column="80" selection-end-line="61" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ReadDOM#0;class#Main#0" />
@@ -212,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="196" />
     <option name="y" value="-13" />
     <option name="width" value="1035" />
@@ -320,11 +318,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538762947949</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add User Class">
+      <created>1538772642617</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1538772642617</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27279636" />
@@ -365,7 +370,8 @@
     <MESSAGE value="ReadXML Scanner" />
     <MESSAGE value="Change 1.xml" />
     <MESSAGE value="Add User Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add User Class" />
+    <MESSAGE value="Fix Bug substr" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Bug substr" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/description.html">
@@ -380,13 +386,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/project-template.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lab1XMLRead.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/Main.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ExampleXSD.xml" />
@@ -424,10 +424,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/Main.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#4401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="341">
+          <caret line="61" column="80" lean-forward="true" selection-start-line="61" selection-start-column="80" selection-end-line="61" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadDOM#0;class#Main#0" />
