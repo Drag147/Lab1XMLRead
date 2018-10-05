@@ -1,79 +1,75 @@
 package com.company;
 
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
 import org.w3c.dom.Element;
-import java.io.*;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class Main {
 
-    public static User user = new User();
-
     public static void main(String[] args) {
 
+        User user = new User();
         try(FileReader file = new FileReader("1.xml"); Scanner scan  = new Scanner(file))
         {
             while (scan.hasNextLine())
             {
-                String tmp = findTag(scan.nextLine().trim());
-                if(!tmp.equals(""))
-                {
-                    System.out.println(tmp);
-                }
+                String tmp = findTag(scan.nextLine().trim(), user);
+                System.out.println(tmp);
             }
         }
         catch (Exception e) {
             System.out.print(e.getMessage());
         }
 
-        System.out.println("-------------------------------------------");
+        System.out.println("\n\n-------------------------------------------\n");
 
         System.out.println("F:" + user.getFirstname());
         System.out.println("L:" + user.getLastname());
         System.out.println("N:" + user.getNickname());
     }
 
-    public static String findTag(String str)
+    private static String findTag(String str, User user)
     {
         int indStart1 = str.indexOf("<");
-        int indStart2 =  str.indexOf(">");
-        int indEnd1 = str.lastIndexOf("<");
-        int indEnd2 = str.lastIndexOf(">");
+        int indEnd1 =  str.indexOf(">");
+        int indStart2 = str.lastIndexOf("<");
         int indVopr = str.indexOf("?");
         int indSlesh = str.indexOf("/");
         if(indVopr==-1)
         {
-            if (indStart1 == indEnd1 && indSlesh==-1)
+            if (indStart1 == indStart2 && indSlesh==-1)
             {
-                return "Element: "+str.substring(indStart1+1, indStart2);
+                return "Element: "+str.substring(indStart1+1, indEnd1);
             }
             else
             {
-                String elemName = str.substring(indStart1+1, indStart2);
+                String elemName = str.substring(indStart1+1, indEnd1);
                 if(elemName.equals("firstname"))
                 {
-                    user.setFirstname(str.substring(indStart2+1, indEnd1));
+                    user.setFirstname(str.substring(indEnd1+1, indStart2));
                 }
                 if(elemName.equals("lastname"))
                 {
-                    user.setLastname(str.substring(indStart2+1, indEnd1));
+                    user.setLastname(str.substring(indEnd1+1, indStart2));
                 }
                 if(elemName.equals("nickname"))
                 {
-                    user.setNickname(str.substring(indStart2+1, indEnd1));
+                    user.setNickname(str.substring(indEnd1+1, indStart2));
                 }
-                return "Value: "+str.substring(indStart2+1, indEnd1);
+                return "Value: "+str.substring(indEnd1+1, indStart2);
             }
         }
-        if(indVopr!=-1)
+        else
         {
             return "Params";
         }
-        return "";
     }
 
     public static void ReadDOM()

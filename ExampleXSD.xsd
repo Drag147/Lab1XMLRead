@@ -3,34 +3,34 @@
 	<xs:element name="Пилоты">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Личныйномер" type="xs:Short" use="required"/>
+				<xs:element name="Личныйномер" type="xs:short"/>
 				<xs:element name="Имя" type="xs:string"/>
 				<xs:element name="Фамилия" type="xs:string"/>
-				<xs:element name="Дата рождения" type="xs:gYearMonth"/>
+				<xs:element name="Дата_рождения" type="xs:gYearMonth"/>
 			</xs:sequence>
 		</xs:complexType>		
 	</xs:element>
 	<xs:element name="Болиды">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Название болида" type="xs:string" use="required"/>
-				<xs:element name="Название шасси" type="xs:string"/>
-				<xs:element name="Название движка" type="xs:string"/>
-				<xs:element name="Год болида" type="xs:gDay"/>
+				<xs:element name="Название_болида" type="xs:string"/>
+				<xs:element name="Название_шасси" type="xs:string"/>
+				<xs:element name="Название_движка" type="xs:string"/>
+				<xs:element name="Год_болида" type="xs:gDay"/>
 			</xs:sequence>
 		</xs:complexType>		
 	</xs:element>
 	<xs:element name="Команды">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Название команды" type="xs:string" use="required"/>
-				<xs:element name="Год команды" type="xs:gDay"/>
-				<xs:element name="Имя руководителя" type="xs:string"/>
-				<xs:element name="Фамилия руководителя" type="xs:string"/>
-				<xs:element name="Страна расположения" type="xs:string"/>
-				<xs:element name="Название болида команды" type="xs:string" use="required"/>
-				<xs:element name="Личный номер первого действующего пилота" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Личный номер второго действующего пилота" type="xs:positiveInteger" use="required"/>
+				<xs:element name="Название_команды" type="xs:string"/>
+				<xs:element name="Год_команды" type="xs:gDay"/>
+				<xs:element name="Имя_руководителя" type="xs:string"/>
+				<xs:element name="Фамилия_руководителя" type="xs:string"/>
+				<xs:element name="Страна_расположения" type="xs:string"/>
+				<xs:element name="Название_болида_команды" type="xs:string"/>
+				<xs:element name="Личный_номер_первого_действующего_пилота" type="xs:positiveInteger"/>
+				<xs:element name="Личный_номер_второго_действующего_пилота" type="xs:positiveInteger"/>
 			</xs:sequence>
 		</xs:complexType>		
 	</xs:element>
