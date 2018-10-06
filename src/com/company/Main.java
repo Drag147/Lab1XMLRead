@@ -9,6 +9,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.Writer;
 import java.util.Scanner;
 
 public class Main {
@@ -37,6 +39,17 @@ public class Main {
 
         System.out.println("JSON:\n");
         System.out.println(user.getJSON());
+
+        try(FileWriter fileWR = new FileWriter("JsonExport.json"))
+        {
+            String json = user.getJSON();
+            fileWR.write(json);
+            fileWR.flush();
+            System.out.println("JSON записан в файл JsonExport.json");
+        }catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
 
     private static String findTag(String str, User user)
