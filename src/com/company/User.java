@@ -43,5 +43,14 @@ public class User {
     public String getNickname() {
         return nickname;
     }
+
+    public String toString() {
+        return "Пользователь: \nИмя: " + firstname +"\nФамилия: " + lastname + "\nНикнейм: " + nickname + "\n";
+    }
+
+    public String getJSON() {
+        return "{\n" + "\t\"user\" : \n\t\t\t{\n\t\t\t\t\"firstname\" : \"" + firstname + "\",\n\t\t\t\t\"lastname\" : \""
+                + lastname + "\",\n\t\t\t\t\"nickname\" : \"" + nickname  + "\"\n\t\t\t}\n}";
+    }
 }
 

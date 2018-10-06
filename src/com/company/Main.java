@@ -33,9 +33,10 @@ public class Main {
 
         System.out.println("\n-------------------------------------------\n");
 
-        System.out.println("F:" + user.getFirstname());
-        System.out.println("L:" + user.getLastname());
-        System.out.println("N:" + user.getNickname());
+        System.out.println(user.toString());
+
+        System.out.println("JSON:\n");
+        System.out.println(user.getJSON());
     }
 
     private static String findTag(String str, User user)

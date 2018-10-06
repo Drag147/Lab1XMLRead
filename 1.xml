@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
-<company>
-    <user>
-        <firstname>Sergey</firstname>
-        <lastname>Borodin</lastname>
-        <nickname>Drag147</nickname>
-    </user>
-</company>
+<user>
+    <firstname>Sergey</firstname>
+    <lastname>Borodin</lastname>
+    <nickname>Drag147</nickname>
+</user>
