@@ -10,6 +10,7 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.io.FileWriter;
 
 public class Main {
 
@@ -25,7 +26,17 @@ public class Main {
                 System.out.println(formula1.getBolidsInfo());
 
                 System.out.println();
-                System.out.println(formula1.getJSON());
+
+                try(FileWriter fileWR = new FileWriter("JsonExport.json"))
+                {
+                    String json = formula1.getJSON();
+                    fileWR.write(json);
+                    fileWR.flush();
+                    System.out.println("JSON записан в файл JsonExport.json");
+                }catch (Exception e)
+                {
+                    System.out.println(e.getMessage());
+                }
             }
         }
         catch (Exception e)

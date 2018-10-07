@@ -41,7 +41,7 @@ public class Bolids {
     {
         return "\t\t{\n" +"\t\t\t\"Name_bolid\": \""+ NameBolid +"\",\n" +
                 "\t\t\t\"Name_engine\": \"" + NameEngine + "\",\n" +"\t\t\t\"Name_chassis\": \"" + NameChassis + "\",\n" +
-                "\t\t\t\"Year_bolid\": \"" + new SimpleDateFormat("yyyy").format(this.YearBolid) + "\"\n\t\t}\n";
+                "\t\t\t\"Year_bolid\": \"" + new SimpleDateFormat("yyyy").format(this.YearBolid) + "\"\n\t\t}";
     }
 
     public void setNameBolid(String nameBolid) {

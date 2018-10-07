@@ -71,13 +71,21 @@ public class Formula1 {
         for(Pilots pilots: pilotsList)
         {
             json = json.concat(pilots.getJSONstring());
+            if(pilotsList.getLast()!=pilots)
+            {
+                json += ",\n";
+            }
         }
-        json += "\t  ],\n\t\t\"Bolids\": [\n";
+        json += "\n\t  ],\n\t\t\"Bolids\": [\n";
         for(Bolids bolids: bolidsList)
         {
             json = json.concat(bolids.getJSONstring());
+            if(bolidsList.getLast()!=bolids)
+            {
+                json += ",\n";
+            }
         }
-        json += "\t  ]\n\t}\n}";
+        json += "\n\t  ]\n\t}\n}";
 
         return  json;
     }
