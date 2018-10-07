@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Formula_1">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Pilots">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Personal_pilot_number" type="xs:string"/>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="Surname" type="xs:string"/>
+                            <xs:element name="Date_of_birth" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Bolids">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Name_bolid" type="xs:string" />
+                            <xs:element name="Name_engine" type="xs:string" />
+                            <xs:element name="Name_chassis" type="xs:string" />
+                            <xs:element name="Year_bolid" type="xs:gYear"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Teams">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Name_team" type="xs:string"/>
+                            <xs:element name="Year_team" type="xs:gYear"/>
+                            <xs:element name="Name_leader_team" type="xs:string"/>
+                            <xs:element name="Surname_leader_team" type="xs:string"/>
+                            <xs:element name="Country_base_location" type="xs:string"/>
+                            <xs:element name="Name_bolid" type="xs:string"/>
+                            <xs:element name="Personal_number_first_pilot" type="xs:short"/>
+                            <xs:element name="Personal_number_second_pilot" type="xs:short"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Grand_prix">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Number" type="xs:long"/>
+                            <xs:element name="Year" type="xs:gYear"/>
+                            <xs:element name="Host_country" type="xs:string"/>
+                            <xs:element name="Name_track" type="xs:string"/>
+                            <xs:element name="Number_circles" type="xs:short"/>
+                            <xs:element name="Track_km" type="xs:float"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Results_qualification">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Id_result" type="xs:long"/>
+                            <xs:element name="Id_grand_prix" type="xs:long"/>
+                            <xs:element name="Date_qual" type="xs:date"/>
+                            <xs:element name="Posittion" type="xs:byte"/>
+                            <xs:element name="Number_pilot" type="xs:short"/>
+                            <xs:element name="Time" type="xs:time"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Results_race">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Id_result" type="xs:long"/>
+                            <xs:element name="Id_grand_prix" type="xs:long"/>
+                            <xs:element name="Date_race" type="xs:date"/>
+                            <xs:element name="Posittion" type="xs:byte"/>
+                            <xs:element name="Number_pilot" type="xs:short"/>
+                            <xs:element name="Time" type="xs:time"/>
+                            <xs:element name="Elimination" type="xs:boolean"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
