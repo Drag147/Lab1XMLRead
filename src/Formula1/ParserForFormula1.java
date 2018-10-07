@@ -19,7 +19,7 @@ public class ParserForFormula1 {
     {
         int startClassind, endClassind;
         boolean writeClass = false;
-        try(FileReader file = new FileReader("./Resources/Formula 1.xml"); Scanner scan  = new Scanner(file))
+        try(FileReader file = new FileReader(this.fileName); Scanner scan  = new Scanner(file))
         {
             while (scan.hasNextLine())
             {

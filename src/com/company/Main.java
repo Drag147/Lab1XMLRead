@@ -14,14 +14,20 @@ import java.io.FileWriter;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+         mainM();
+    }
 
+    public static void mainM ()
+    {
         Formula1 formula1 = new Formula1();
-        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml");
+        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml");//"Formula 1 Big.xml");
 
         try{
             if(parserForFormula1.myParseFileXML(formula1))
             {
+                //System.out.println("Размер: " + formula1.getSizeP());
                 System.out.println(formula1.getPilotsInfo());
                 System.out.println(formula1.getBolidsInfo());
 
@@ -43,7 +49,34 @@ public class Main {
         {
             System.out.println(e.getMessage());
         }
+    }
 
+    public static void Gen()
+    {
+        try (FileWriter fileWriter = new FileWriter("Formula 1 Big.xml"))
+        {
+            fileWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
+                    "<Formula_1>\n\t");
+            for(int i = 0; i < 1500000; i++)
+            {
+                fileWriter.append("<Bolids>\n" +
+                        "        <Name_bolid>Ferrari SF71H</Name_bolid>\n" +
+                        "        <Name_engine>Ferrari 062 EVO 1.6 V6t</Name_engine>\n" +
+                        "        <Name_chassis>Ferrari SF71H</Name_chassis>\n" +
+                        "        <Year_bolid>2018</Year_bolid>\n" +
+                        "    </Bolids>\n" +
+                        "    <Bolids>\n" +
+                        "        <Name_bolid>Force India VJM11</Name_bolid>\n" +
+                        "        <Name_engine>Force India VJM11</Name_engine>\n" +
+                        "        <Name_chassis>Mercedes M09 EQ Power+ 1.6 V6T</Name_chassis>\n" +
+                        "        <Year_bolid>2018</Year_bolid>\n" +
+                        "    </Bolids>\n");
+            }
+            fileWriter.append("\n</Formula_1>");
+        }catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static void ReadDOM()

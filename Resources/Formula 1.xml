@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" xsi:schemaLocation="https://www.w3schools.com ./Formula 1.xsd" ?>
 <Formula_1>
     <Pilots>
         <Personal_pilot_number>2</Personal_pilot_number>

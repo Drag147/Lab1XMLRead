@@ -38,6 +38,11 @@ public class Formula1 {
         }
     }
 
+    public int getSizeP()
+    {
+        return bolidsList.size();
+    }
+
     public String getPilotsInfo()
     {
         String resString = "Всего пилотов: " + pilotsList.size()+"\n";
