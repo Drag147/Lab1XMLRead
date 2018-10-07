@@ -22,6 +22,14 @@
         <Personal_number_first_pilot>9</Personal_number_first_pilot>
         <Personal_number_second_pilot>16</Personal_number_second_pilot>
     </Teams>
+    <Grand_prix>
+        <Number>1</Number>
+        <Year>2018</Year>
+        <Host_country>Австралия</Host_country>
+        <Name_track>Australian Grand Prix</Name_track>
+        <Number_circles>57</Number_circles>
+        <Track_km>5.7</Track_km>
+    </Grand_prix>
     <Results_qualification>
         <Id_result>1</Id_result>
         <Id_grand_prix>1</Id_grand_prix>
