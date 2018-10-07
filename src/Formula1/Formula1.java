@@ -34,7 +34,7 @@ public class Formula1 {
         for (Pilots pilot: pilotsList)
         {
             resString = resString.concat("---------------\nПилот №" + i + ":");
-            resString = resString.concat(pilot.toString()+"---------------\n");
+            resString = resString.concat(pilot.toString("dd MMMM, yyyy года")+"---------------\n");
             i++;
         }
         return resString;

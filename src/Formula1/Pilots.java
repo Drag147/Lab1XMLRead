@@ -24,14 +24,19 @@ public class Pilots {
         this.DateBirthDay = DateBirthDay;
     }
 
-    public String toString()
+    public String toString(String formatDateOutput)
     {
         String resString = "\nЛичный номер пилота: " + this.PersonalPilotNumber;
         resString += "\nИмя пилота: " + this.Name;
         resString += "\nФамилия пилота: " + this.Surname;
-        resString += "\nДата рождения: " + new SimpleDateFormat("dd MMMM, yyyy года").format(this.DateBirthDay) + "\n";
+        resString += "\nДата рождения: " + new SimpleDateFormat(formatDateOutput).format(this.DateBirthDay) + "\n";
 
         return resString;
+    }
+
+    public String toString()
+    {
+        return toString("yyyy-mm-dd");
     }
 
     public short getPersonalPilotNumber() {

@@ -39,7 +39,7 @@ public class Main {
                     if(startClassind!=-1)
                     {
                         writeClass = true;
-                        //System.out.println("Начало класса: " +namesClass[i]+"\n");
+                        System.out.println("Начало класса: " +namesClass[i]+"\n");
                         nowClassIndex=i;
                         paramsForClass[i]="";
                         break;
@@ -47,7 +47,7 @@ public class Main {
                     if(endClassind!=-1)
                     {
                         writeClass = false;
-                        //System.out.println("Конец класса: " +namesClass[i]+"\n");
+                        System.out.println("Конец класса: " +namesClass[i]+"\n");
                         if(i==0)
                         {
                             if(formula1.addNewPilotsFromXML(paramsForClass[i]))
