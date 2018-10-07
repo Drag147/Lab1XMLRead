@@ -1,6 +1,7 @@
 package com.company;
 
 import Formula1.Formula1;
+import Formula1.ParserForFormula1;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -9,80 +10,26 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
         Formula1 formula1 = new Formula1();
-        String[] namesClass = {"Pilots", "Bolids", "Teams", "Grand_prix", "Results_qualification", "Results_race"};
-        int startClassind, endClassind;
-        boolean writeClass = false;
-        int nowClassIndex=0;
-        String[] paramsForClass = new String[namesClass.length];
-        for (int i =0; i<paramsForClass.length;i++)
-        {
-            paramsForClass[i]="";
-        }
-        try(FileReader file = new FileReader("./Resources/Formula 1.xml"); Scanner scan  = new Scanner(file))
-        {
-            while (scan.hasNextLine())
+        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml");
+
+        try{
+            if(parserForFormula1.myParseFileXML(formula1))
             {
-                boolean tmpBool = writeClass;
-                String line = scan.nextLine().trim();
-                for (int i =0; i<namesClass.length; i++) {
-                    startClassind = line.indexOf("<"+namesClass[i]+">");
-                    endClassind = line.indexOf("</"+namesClass[i]+">");
-                    if(startClassind!=-1)
-                    {
-                        writeClass = true;
-                        nowClassIndex=i;
-                        paramsForClass[i]="";
-                        break;
-                    }
-                    if(endClassind!=-1)
-                    {
-                        writeClass = false;
-                        switch (namesClass[i])
-                        {
-                            case "Pilots":
-                                formula1.addNewPilotsFromXML(paramsForClass[i]);
-                                break;
-                            case "Bolids":
-                                formula1.addNewBolidsFromXML(paramsForClass[i]);
-                                break;
-                            case "Teams":
-
-                                break;
-                            case "Grand_prix":
-
-                                break;
-                            case "Results_qualification":
-
-                                break;
-                            case "Results_race":
-
-                                break;
-
-                        }
-                        break;
-                    }
-                }
-                if(writeClass && tmpBool) {
-                    paramsForClass[nowClassIndex] = paramsForClass[nowClassIndex].concat(line+"\n");
-                }
+                System.out.println(formula1.getPilotsInfo());
+                System.out.println(formula1.getBolidsInfo());
             }
-
-
-            System.out.println(formula1.getPilotsInfo());
-            System.out.println(formula1.getBolidsInfo());
         }
-        catch (Exception e) {
-            System.out.print(e.getMessage());
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
         }
+
     }
 
     public static void ReadDOM()

@@ -1,8 +1,8 @@
 package Formula1;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Formula1 {
 
@@ -10,15 +10,10 @@ public class Formula1 {
 
     private LinkedList<Bolids> bolidsList = new LinkedList<Bolids>();
 
-    public boolean addNewPilotsFromXML(String params) {
+    public boolean addNewPilots(ArrayList<String> params) {
         try {
-            String[] splitedStr = params.split("\n");
-            for(int i= 0; i<splitedStr.length; i++)
-            {
-                splitedStr[i] = splitedStr[i].substring(splitedStr[i].indexOf(">")+1, splitedStr[i].lastIndexOf("<"));
-            }
-            Pilots newPilot = new Pilots(Short.parseShort(splitedStr[0]), splitedStr[1],
-                    splitedStr[2], new SimpleDateFormat("yyyy-dd-mm").parse(splitedStr[3]));
+            Pilots newPilot = new Pilots(Short.parseShort(params.get(0)), params.get(1),
+                    params.get(2), new SimpleDateFormat("yyyy-dd-mm").parse(params.get(3)));
             pilotsList.add(newPilot);
             return true;
         }
@@ -29,15 +24,10 @@ public class Formula1 {
         }
     }
 
-    public boolean addNewBolidsFromXML(String params) {
+    public boolean addNewBolids(ArrayList<String> params) {
         try {
-            String[] splitedStr = params.split("\n");
-            for(int i= 0; i<splitedStr.length; i++)
-            {
-                splitedStr[i] = splitedStr[i].substring(splitedStr[i].indexOf(">")+1, splitedStr[i].lastIndexOf("<"));
-            }
-            Bolids newBolid = new Bolids(splitedStr[0], splitedStr[1], splitedStr[2],
-                    new SimpleDateFormat("yyyy").parse(splitedStr[3]));
+            Bolids newBolid = new Bolids(params.get(0), params.get(1), params.get(2),
+                    new SimpleDateFormat("yyyy").parse(params.get(3)));
             bolidsList.add(newBolid);
             return true;
         }
