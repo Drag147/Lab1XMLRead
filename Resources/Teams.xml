@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Teams>
+    <Name_team>Alfa Romeo Sauber F1 Team 2018</Name_team>
+    <Year_team>2018</Year_team>
+    <Name_leader_team>Фредерик</Name_leader_team>
+    <Surname_leader_team>Вассеур</Surname_leader_team>
+    <Country_base_location>Швейцария</Country_base_location>
+    <Name_bolid>Sauber C37</Name_bolid>
+    <Personal_number_first_pilot>9</Personal_number_first_pilot>
+    <Personal_number_second_pilot>16</Personal_number_second_pilot>
+</Teams>
