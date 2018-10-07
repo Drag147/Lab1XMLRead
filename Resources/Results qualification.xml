@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Results_qualification>
+    <Id_result>1</Id_result>
+    <Id_grand_prix>1</Id_grand_prix>
+    <Date_qual>2018-03-25</Date_qual>
+    <Posittion>1</Posittion>
+    <Number_pilot>5</Number_pilot>
+    <Time>01:29:33.283</Time>
+    <Elimination>false</Elimination>
+</Results_qualification>
