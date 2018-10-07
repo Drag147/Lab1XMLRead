@@ -59,7 +59,24 @@ public class Main {
                     "<Formula_1>\n\t");
             for(int i = 0; i < 1500000; i++)
             {
-                fileWriter.append("<Bolids>\n" +
+                fileWriter.append("<Pilots>\n" +
+                        "        <Personal_pilot_number>2</Personal_pilot_number>\n" +
+                        "        <Name>Стоффель</Name>\n" +
+                        "        <Surname>Вандорн</Surname>\n" +
+                        "        <Date_of_birth>1991-03-26</Date_of_birth>\n" +
+                        "    </Pilots>\n" +
+                        "    <Pilots>\n" +
+                        "        <Personal_pilot_number>3</Personal_pilot_number>\n" +
+                        "        <Name>Даниэль</Name>\n" +
+                        "        <Surname>Риккардо</Surname>\n" +
+                        "        <Date_of_birth>1989-07-01</Date_of_birth>\n" +
+                        "    </Pilots>\n" +
+                        "    <Pilots>\n" +
+                        "        <Personal_pilot_number>5</Personal_pilot_number>\n" +
+                        "        <Name>Себастьян</Name>\n" +
+                        "        <Surname>Фетель</Surname>\n" +
+                        "        <Date_of_birth>1987-07-03</Date_of_birth>\n" +
+                        "    </Pilots>\n\t<Bolids>\n" +
                         "        <Name_bolid>Ferrari SF71H</Name_bolid>\n" +
                         "        <Name_engine>Ferrari 062 EVO 1.6 V6t</Name_engine>\n" +
                         "        <Name_chassis>Ferrari SF71H</Name_chassis>\n" +
