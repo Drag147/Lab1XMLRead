@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6afbd5c2-253e-48d0-8f78-782895aa2c2d" name="Default Changelist" comment="Remove user. Add preparing parsing for class.">
+    <list default="true" id="6afbd5c2-253e-48d0-8f78-782895aa2c2d" name="Default Changelist" comment="Add parsing Pilots and output beautiful String">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Formula 1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Formula 1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formula1/Formula1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formula1/Formula1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formula1/Pilots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formula1/Pilots.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/User.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +71,7 @@
           <entry key="Bolids" value="1" />
           <entry key="Comands" value="1" />
           <entry key="class" value="1" />
-          <entry key="java" value="7" />
+          <entry key="java" value="12" />
           <entry key="json" value="1" />
           <entry key="xml" value="27" />
           <entry key="xsd" value="3" />
@@ -80,24 +80,24 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="12" />
           <entry key="JSON" value="1" />
           <entry key="XML" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2775" />
-          <entry key="txt" value="418" />
-          <entry key="xml" value="546" />
+          <entry key="java" value="4578" />
+          <entry key="txt" value="472" />
+          <entry key="xml" value="550" />
           <entry key="xsd" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2775" />
-          <entry key="PLAIN_TEXT" value="418" />
-          <entry key="XML" value="593" />
+          <entry key="JAVA" value="4578" />
+          <entry key="PLAIN_TEXT" value="472" />
+          <entry key="XML" value="597" />
         </counts>
       </usages-collector>
     </session>
@@ -144,36 +144,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="70">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ReadDOM#0;class#Main#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Formula1/Formula1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/Formula 1.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="2" />
-              <folding>
-                <element signature="n#Bolids#0;n#Formula_1#0;n#!!top" />
-                <element signature="n#Teams#0;n#Formula_1#0;n#!!top" />
-                <element signature="n#Grand_prix#0;n#Formula_1#0;n#!!top" />
-                <element signature="n#Results_qualification#0;n#Formula_1#0;n#!!top" />
-                <element signature="n#Results_race#0;n#Formula_1#0;n#!!top" />
+                <marker date="1538883512478" expanded="true" signature="2386:2533" ph="..." />
               </folding>
             </state>
           </provider>
@@ -182,8 +158,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Formula1/Pilots.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="205">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Formula1/Formula1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -224,17 +215,19 @@
         <option value="$PROJECT_DIR$/Resources/Results race.xml" />
         <option value="$PROJECT_DIR$/Resources/Results qualification.xml" />
         <option value="$PROJECT_DIR$/Resources/Grand prix.xml" />
-        <option value="$PROJECT_DIR$/Resources/Formula 1.xml" />
         <option value="$PROJECT_DIR$/Resources/Pilots.xml" />
+        <option value="$PROJECT_DIR$/Resources/Formula 1.xml" />
+        <option value="$PROJECT_DIR$/src/Formula1/Formula1.java" />
         <option value="$PROJECT_DIR$/src/Formula1/Pilots.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="470" />
-    <option name="width" value="895" />
-    <option name="height" value="735" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="924" />
+    <option name="height" value="682" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -281,7 +274,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538879351980" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538883548074" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -466,14 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538874629674</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Remove user. Add preparing parsing for class.">
+      <created>1538879359574</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1538879359574</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="470" y="0" width="895" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.18323353" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.20364742" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.20744681" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -482,16 +482,16 @@
       <window_info id="Favorites" order="6" sideWeight="0.502439" side_tool="true" weight="0.20744681" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5823627" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5754098" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.327787" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.327787" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3295082" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.327787" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.3262295" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -555,7 +555,8 @@
     <MESSAGE value="Update Pilots.xml" />
     <MESSAGE value="Add class Pilots" />
     <MESSAGE value="Remove user. Add preparing parsing for class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove user. Add preparing parsing for class." />
+    <MESSAGE value="Add parsing Pilots and output beautiful String" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add parsing Pilots and output beautiful String" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/description.html">
@@ -661,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formula1/Pilots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Results qualification.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -675,17 +669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formula1/Formula1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Formula 1.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="2" />
+        <state relative-caret-position="153">
+          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
           <folding>
             <element signature="n#Bolids#0;n#Formula_1#0;n#!!top" />
             <element signature="n#Teams#0;n#Formula_1#0;n#!!top" />
@@ -696,13 +683,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formula1/Formula1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formula1/Pilots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="70">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadDOM#0;class#Main#0" />
+            <marker date="1538883512478" expanded="true" signature="2386:2533" ph="..." />
           </folding>
         </state>
       </provider>

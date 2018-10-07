@@ -1,5 +1,6 @@
 package com.company;
 
+import Formula1.Formula1;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -16,37 +17,58 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Formula1 formula1 = new Formula1();
         String[] namesClass = {"Pilots", "Bolids", "Teams", "Grand_prix", "Results_qualification", "Results_race"};
         int startClassind, endClassind;
         boolean writeClass = false;
-        String pilotClass = "";
+        int nowClassIndex=0;
+        String[] paramsForClass = new String[namesClass.length];
+        for (int i =0; i<paramsForClass.length;i++)
+        {
+            paramsForClass[i]="";
+        }
         try(FileReader file = new FileReader("./Resources/Formula 1.xml"); Scanner scan  = new Scanner(file))
         {
             while (scan.hasNextLine())
             {
                 boolean tmpBool = writeClass;
                 String line = scan.nextLine().trim();
-                for (String x:namesClass) {
-                    startClassind = line.indexOf("<"+x+">");
-                    endClassind = line.indexOf("</"+x+">");
+                for (int i =0; i<namesClass.length; i++) {
+                    startClassind = line.indexOf("<"+namesClass[i]+">");
+                    endClassind = line.indexOf("</"+namesClass[i]+">");
                     if(startClassind!=-1)
                     {
                         writeClass = true;
-                        System.out.println("Начало класса: " + x+"\n");
+                        //System.out.println("Начало класса: " +namesClass[i]+"\n");
+                        nowClassIndex=i;
+                        paramsForClass[i]="";
                         break;
                     }
                     if(endClassind!=-1)
                     {
                         writeClass = false;
-                        System.out.println("Конец класса: " +x+"\n");
-                        System.out.println("Переменные класса: " +pilotClass+"\n");
+                        //System.out.println("Конец класса: " +namesClass[i]+"\n");
+                        if(i==0)
+                        {
+                            if(formula1.addNewPilotsFromXML(paramsForClass[i]))
+                            {
+                                System.out.println("Добавлено");
+                            }
+                            else
+                            {
+                                System.out.println("Ошибка");
+                            }
+                        }
                         break;
                     }
                 }
                 if(writeClass && tmpBool) {
-                    pilotClass = pilotClass.concat(line);
+                    paramsForClass[nowClassIndex] = paramsForClass[nowClassIndex].concat(line+"\n");
                 }
             }
+
+
+            System.out.println(formula1.getPilotsInfo());
         }
         catch (Exception e) {
             System.out.print(e.getMessage());

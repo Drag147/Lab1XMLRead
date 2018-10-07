@@ -1,5 +1,6 @@
 package Formula1;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Pilots {
@@ -21,6 +22,16 @@ public class Pilots {
         this.Name = Name;
         this.Surname = Surname;
         this.DateBirthDay = DateBirthDay;
+    }
+
+    public String toString()
+    {
+        String resString = "\nЛичный номер пилота: " + this.PersonalPilotNumber;
+        resString += "\nИмя пилота: " + this.Name;
+        resString += "\nФамилия пилота: " + this.Surname;
+        resString += "\nДата рождения: " + new SimpleDateFormat("dd MMMM, yyyy года").format(this.DateBirthDay) + "\n";
+
+        return resString;
     }
 
     public short getPersonalPilotNumber() {
