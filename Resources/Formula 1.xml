@@ -24,6 +24,12 @@
         <Name_chassis>Ferrari SF71H</Name_chassis>
         <Year_bolid>2018</Year_bolid>
     </Bolids>
+    <Bolids>
+        <Name_bolid>Force India VJM11</Name_bolid>
+        <Name_engine>Force India VJM11</Name_engine>
+        <Name_chassis>Mercedes M09 EQ Power+ 1.6 V6T</Name_chassis>
+        <Year_bolid>2018</Year_bolid>
+    </Bolids>
     <Teams>
         <Name_team>Alfa Romeo Sauber F1 Team 2018</Name_team>
         <Year_team>2018</Year_team>

@@ -39,7 +39,6 @@ public class Main {
                     if(startClassind!=-1)
                     {
                         writeClass = true;
-                        System.out.println("Начало класса: " +namesClass[i]+"\n");
                         nowClassIndex=i;
                         paramsForClass[i]="";
                         break;
@@ -47,17 +46,27 @@ public class Main {
                     if(endClassind!=-1)
                     {
                         writeClass = false;
-                        System.out.println("Конец класса: " +namesClass[i]+"\n");
-                        if(i==0)
+                        switch (namesClass[i])
                         {
-                            if(formula1.addNewPilotsFromXML(paramsForClass[i]))
-                            {
-                                System.out.println("Добавлено");
-                            }
-                            else
-                            {
-                                System.out.println("Ошибка");
-                            }
+                            case "Pilots":
+                                formula1.addNewPilotsFromXML(paramsForClass[i]);
+                                break;
+                            case "Bolids":
+                                formula1.addNewBolidsFromXML(paramsForClass[i]);
+                                break;
+                            case "Teams":
+
+                                break;
+                            case "Grand_prix":
+
+                                break;
+                            case "Results_qualification":
+
+                                break;
+                            case "Results_race":
+
+                                break;
+
                         }
                         break;
                     }
@@ -69,6 +78,7 @@ public class Main {
 
 
             System.out.println(formula1.getPilotsInfo());
+            System.out.println(formula1.getBolidsInfo());
         }
         catch (Exception e) {
             System.out.print(e.getMessage());
