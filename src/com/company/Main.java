@@ -10,86 +10,46 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.Writer;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        User user = new User();
-        try(FileReader file = new FileReader("1.xml"); Scanner scan  = new Scanner(file))
+        String[] namesClass = {"Pilots", "Bolids", "Teams", "Grand_prix", "Results_qualification", "Results_race"};
+        int startClassind, endClassind;
+        boolean writeClass = false;
+        String pilotClass = "";
+        try(FileReader file = new FileReader("./Resources/Formula 1.xml"); Scanner scan  = new Scanner(file))
         {
             while (scan.hasNextLine())
             {
-                String tmp = findTag(scan.nextLine().trim(), user);
-                if(!tmp.equals(""))
-                {
-                    System.out.println(tmp);
+                boolean tmpBool = writeClass;
+                String line = scan.nextLine().trim();
+                for (String x:namesClass) {
+                    startClassind = line.indexOf("<"+x+">");
+                    endClassind = line.indexOf("</"+x+">");
+                    if(startClassind!=-1)
+                    {
+                        writeClass = true;
+                        System.out.println("Начало класса: " + x+"\n");
+                        break;
+                    }
+                    if(endClassind!=-1)
+                    {
+                        writeClass = false;
+                        System.out.println("Конец класса: " +x+"\n");
+                        System.out.println("Переменные класса: " +pilotClass+"\n");
+                        break;
+                    }
+                }
+                if(writeClass && tmpBool) {
+                    pilotClass = pilotClass.concat(line);
                 }
             }
         }
         catch (Exception e) {
             System.out.print(e.getMessage());
-        }
-
-        System.out.println("\n-------------------------------------------\n");
-
-        System.out.println(user.toString());
-
-        System.out.println("JSON:\n");
-        System.out.println(user.getJSON());
-
-        try(FileWriter fileWR = new FileWriter("JsonExport.json"))
-        {
-            String json = user.getJSON();
-            fileWR.write(json);
-            fileWR.flush();
-            System.out.println("JSON записан в файл JsonExport.json");
-        }catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private static String findTag(String str, User user)
-    {
-        int indStart1 = str.indexOf("<");
-        int indEnd1 =  str.indexOf(">");
-        int indStart2 = str.lastIndexOf("<");
-        int indVopr = str.indexOf("?");
-        int indSlesh = str.indexOf("/");
-        if(indVopr==-1)
-        {
-            if (indStart1 == indStart2 && indSlesh==-1)
-            {
-                return "Element: "+str.substring(indStart1+1, indEnd1);
-            }
-            else
-            {
-                if(indStart1+1 < indEnd1 && indEnd1+1 < indStart2)
-                {
-                    String elemName = str.substring(indStart1 + 1, indEnd1);
-                    if (elemName.equals("firstname")) {
-                        user.setFirstname(str.substring(indEnd1 + 1, indStart2));
-                    }
-                    if (elemName.equals("lastname")) {
-                        user.setLastname(str.substring(indEnd1 + 1, indStart2));
-                    }
-                    if (elemName.equals("nickname")) {
-                        user.setNickname(str.substring(indEnd1 + 1, indStart2));
-                    }
-                    return "Value: " + str.substring(indEnd1 + 1, indStart2);
-                }
-                else
-                {
-                    return "";
-                }
-            }
-        }
-        else
-        {
-            return "Params";
         }
     }
 
