@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Grand_prix>
+    <Number>1</Number>
+    <Year>2018</Year>
+    <Host_country>Австралия</Host_country>
+    <Name_track>Australian Grand Prix</Name_track>
+    <Number_circles>57</Number_circles>
+</Grand_prix>
