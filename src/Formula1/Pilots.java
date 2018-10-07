@@ -39,6 +39,13 @@ public class Pilots {
         return toString("yyyy-mm-dd");
     }
 
+    public String getJSONstring()
+    {
+        return "\t\t{\n" +"\t\t\t\"Personal_pilot_number\": \""+ PersonalPilotNumber +"\",\n" +
+                "\t\t\t\"Name\": \"" + Name + "\",\n" +"\t\t\t\"Surname\": \"" + Surname + "\",\n" +
+                "\t\t\t\"Date_of_birth\": \"" + new SimpleDateFormat("yyyy-mm-dd").format(this.DateBirthDay) + "\"\n\t\t}\n";
+    }
+
     public short getPersonalPilotNumber() {
         return PersonalPilotNumber;
     }

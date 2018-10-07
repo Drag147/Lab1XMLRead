@@ -63,4 +63,22 @@ public class Formula1 {
         }
         return resString;
     }
+
+    public String getJSON()
+    {
+        String json = "{\n\t\"Formula_1\": {\n\t\"Pilots\": [\n";
+
+        for(Pilots pilots: pilotsList)
+        {
+            json = json.concat(pilots.getJSONstring());
+        }
+        json += "\t  ],\n\t\t\"Bolids\": [\n";
+        for(Bolids bolids: bolidsList)
+        {
+            json = json.concat(bolids.getJSONstring());
+        }
+        json += "\t  ]\n\t}\n}";
+
+        return  json;
+    }
 }

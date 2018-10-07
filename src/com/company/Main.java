@@ -23,6 +23,9 @@ public class Main {
             {
                 System.out.println(formula1.getPilotsInfo());
                 System.out.println(formula1.getBolidsInfo());
+
+                System.out.println();
+                System.out.println(formula1.getJSON());
             }
         }
         catch (Exception e)

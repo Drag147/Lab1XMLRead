@@ -8,7 +8,7 @@ public class ParserForFormula1 {
     private String fileName;
     private String[] namesClass = {"Pilots", "Bolids", "Teams", "Grand_prix", "Results_qualification", "Results_race"};
 
-    private ArrayList<String> paramsClass = new ArrayList<String>();
+    private ArrayList<String> paramsClass = new ArrayList<>();
 
     public ParserForFormula1(String fileName)
     {
@@ -25,16 +25,16 @@ public class ParserForFormula1 {
             {
                 boolean tmpBool = writeClass;
                 String line = scan.nextLine().trim();
-                for (int i = 0; i < namesClass.length; i++) {
-                    startClassind = line.indexOf("<" + namesClass[i]);
-                    endClassind = line.indexOf("</" + namesClass[i]);
+                for (String namesClas : namesClass) {
+                    startClassind = line.indexOf("<" + namesClas);
+                    endClassind = line.indexOf("</" + namesClas);
                     if (startClassind != -1) {
                         writeClass = true;
                         break;
                     }
                     if (endClassind != -1) {
                         writeClass = false;
-                        switch (namesClass[i]) {
+                        switch (namesClas) {
                             case "Pilots":
                                 formula1.addNewPilots(paramsClass);
                                 break;
@@ -70,4 +70,6 @@ public class ParserForFormula1 {
             return  false;
         }
     }
+
+
 }
