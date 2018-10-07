@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Formula_1>
+    <Pilots>
+        <Personal_pilot_number>2</Personal_pilot_number>
+        <Name>Стоффель</Name>
+        <Surname>Вандорн</Surname>
+        <Date_of_birth>1991-03-26</Date_of_birth>
+    </Pilots>
+    <Bolids>
+        <Name_bolid>Ferrari SF71H</Name_bolid>
+        <Name_engine>Ferrari 062 EVO 1.6 V6t</Name_engine>
+        <Name_chassis>Ferrari SF71H</Name_chassis>
+        <Year_bolid>2018</Year_bolid>
+    </Bolids>
+    <Teams>
+        <Name_team>Alfa Romeo Sauber F1 Team 2018</Name_team>
+        <Year_team>2018</Year_team>
+        <Name_leader_team>Фредерик</Name_leader_team>
+        <Surname_leader_team>Вассеур</Surname_leader_team>
+        <Country_base_location>Швейцария</Country_base_location>
+        <Name_bolid>Sauber C37</Name_bolid>
+        <Personal_number_first_pilot>9</Personal_number_first_pilot>
+        <Personal_number_second_pilot>16</Personal_number_second_pilot>
+    </Teams>
+    <Results_qualification>
+        <Id_result>1</Id_result>
+        <Id_grand_prix>1</Id_grand_prix>
+        <Date_qual>2018-03-24</Date_qual>
+        <Posittion>1</Posittion>
+        <Number_pilot>44</Number_pilot>
+        <Time>00:01:21.164</Time>
+    </Results_qualification>
+    <Results_race>
+        <Id_result>1</Id_result>
+        <Id_grand_prix>1</Id_grand_prix>
+        <Date_race>2018-03-25</Date_race>
+        <Posittion>1</Posittion>
+        <Number_pilot>5</Number_pilot>
+        <Time>01:29:33.283</Time>
+        <Elimination>false</Elimination>
+    </Results_race>
+</Formula_1>
