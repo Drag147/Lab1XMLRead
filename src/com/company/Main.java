@@ -16,24 +16,25 @@ public class Main {
 
     public static void main(String[] args)
     {
-         mainM();
+          mainM();
+        //Gen();
     }
 
-    public static void mainM ()
+    private static void mainM ()
     {
         Formula1 formula1 = new Formula1();
-        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1 one line.xml");//"Formula 1 Big.xml");
-
+        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml", 2);//"Formula 1 Big.xml", 1);//
         try{
             if(parserForFormula1.myParseFileXML(formula1))
             {
-                //System.out.println("Размер: " + formula1.getSizeP());
+                //System.out.println("Размер P: " + formula1.getSizeP());
+                //System.out.println("Размер B: " + formula1.getSizeB());
                 System.out.println(formula1.getPilotsInfo());
                 System.out.println(formula1.getBolidsInfo());
 
                 System.out.println();
 
-                /*try(FileWriter fileWR = new FileWriter("JsonExport.json"))
+                try(FileWriter fileWR = new FileWriter("JsonExport.json"))
                 {
                     String json = formula1.getJSON();
                     fileWR.write(json);
@@ -42,7 +43,7 @@ public class Main {
                 }catch (Exception e)
                 {
                     System.out.println(e.getMessage());
-                }*/
+                }
             }
         }
         catch (Exception e)
@@ -51,43 +52,22 @@ public class Main {
         }
     }
 
-    public static void Gen()
+    private static void Gen()
     {
         try (FileWriter fileWriter = new FileWriter("Formula 1 Big.xml"))
         {
-            fileWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
-                    "<Formula_1>\n\t");
-            for(int i = 0; i < 1500000; i++)
+            fileWriter.write("<Formula_1 xmlns=\"https://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"https://www.w3schools.com ./Formula1.xsd\">");
+            for(int i = 0; i < 1400000; i++)
             {
-                fileWriter.append("<Pilots>\n" +
-                        "        <Personal_pilot_number>2</Personal_pilot_number>\n" +
-                        "        <Name>Стоффель</Name>\n" +
-                        "        <Surname>Вандорн</Surname>\n" +
-                        "        <Date_of_birth>1991-03-26</Date_of_birth>\n" +
-                        "    </Pilots>\n" +
-                        "    <Pilots>\n" +
-                        "        <Personal_pilot_number>3</Personal_pilot_number>\n" +
-                        "        <Name>Даниэль</Name>\n" +
-                        "        <Surname>Риккардо</Surname>\n" +
-                        "        <Date_of_birth>1989-07-01</Date_of_birth>\n" +
-                        "    </Pilots>\n" +
-                        "    <Pilots>\n" +
-                        "        <Personal_pilot_number>5</Personal_pilot_number>\n" +
-                        "        <Name>Себастьян</Name>\n" +
-                        "        <Surname>Фетель</Surname>\n" +
-                        "        <Date_of_birth>1987-07-03</Date_of_birth>\n" +
-                        "    </Pilots>\n\t<Bolids>\n" +
-                        "        <Name_bolid>Ferrari SF71H</Name_bolid>\n" +
-                        "        <Name_engine>Ferrari 062 EVO 1.6 V6t</Name_engine>\n" +
-                        "        <Name_chassis>Ferrari SF71H</Name_chassis>\n" +
-                        "        <Year_bolid>2018</Year_bolid>\n" +
-                        "    </Bolids>\n" +
-                        "    <Bolids>\n" +
-                        "        <Name_bolid>Force India VJM11</Name_bolid>\n" +
-                        "        <Name_engine>Force India VJM11</Name_engine>\n" +
-                        "        <Name_chassis>Mercedes M09 EQ Power+ 1.6 V6T</Name_chassis>\n" +
-                        "        <Year_bolid>2018</Year_bolid>\n" +
-                        "    </Bolids>\n");
+                fileWriter.append("<Pilots><Personal_pilot_number>2</Personal_pilot_number><Name>Стоффель</Name>" +
+                        "<Surname>Вандорн</Surname><Date_of_birth>1991-03-26</Date_of_birth></Pilots><Pilots>" +
+                        "<Personal_pilot_number>3</Personal_pilot_number><Name>Даниэль</Name><Surname>Риккардо</Surname>" +
+                        "<Date_of_birth>1989-07-01</Date_of_birth></Pilots><Pilots><Personal_pilot_number>5</Personal_pilot_number>" +
+                        "<Name>Себастьян</Name><Surname>Фетель</Surname><Date_of_birth>1987-07-03</Date_of_birth></Pilots>" +
+                        "<Bolids><Name_bolid>Ferrari SF71H</Name_bolid><Name_engine>Ferrari 062 EVO 1.6 V6t</Name_engine>" +
+                        "<Name_chassis>Ferrari SF71H</Name_chassis><Year_bolid>2018</Year_bolid></Bolids>" +
+                        "<Bolids><Name_bolid>Force India VJM11</Name_bolid><Name_engine>Force India VJM11</Name_engine>" +
+                        "<Name_chassis>Mercedes M09 EQ Power+ 1.6 V6T</Name_chassis><Year_bolid>2018</Year_bolid></Bolids>");
             }
             fileWriter.append("\n</Formula_1>");
         }catch (Exception e)
@@ -96,7 +76,7 @@ public class Main {
         }
     }
 
-    public static void ReadDOM()
+    private static void ReadDOM()
     {
         try
         {

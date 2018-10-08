@@ -40,6 +40,10 @@ public class Formula1 {
 
     public int getSizeP()
     {
+        return pilotsList.size();
+    }
+    public int getSizeB()
+    {
         return bolidsList.size();
     }
 

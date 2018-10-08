@@ -1,34 +1,50 @@
 package Formula1;
 
 import java.io.FileReader;
+import java.io.IOException;
+import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ParserForFormula1 {
     private String fileName;
     private String[] namesClass = {"Pilots", "Bolids", "Teams", "Grand_prix", "Results_qualification", "Results_race"};
+    private int Lines;
 
     private ArrayList<String> paramsClass = new ArrayList<>();
 
-    public ParserForFormula1(String fileName)
+    public ParserForFormula1(String fileName, int LineCount)
     {
-        this.fileName = fileName;
+        this.fileName = fileName; this.Lines = LineCount;
     }
 
     public boolean myParseFileXML(Formula1 formula1)
     {
         int startClassind, endClassind;
         boolean writeClass = false;
-        try
+        try(FileReader file = new FileReader(this.fileName); Scanner scan  = new Scanner(file))
         {
-            String[] lines = readFromFile();
-            for(String line: lines)
+            if(Lines==1)
+            {
+                scan.useDelimiter("><");
+            }
+            while (Lines==1 ? scan.hasNext() : scan.hasNextLine() )
             {
                 boolean tmpBool = writeClass;
+                String line;
+                if(Lines==1)
+                {
+                    line = scan.next().trim();
+                }
+                else
+                {
+                    line = scan.nextLine().trim();
+                }
+
                 for (String namesClas : namesClass) {
-                    startClassind = line.indexOf("<" + namesClas);
-                    endClassind = line.indexOf("</" + namesClas);
-                    if (startClassind != -1) {
+                    startClassind = line.indexOf(namesClas);
+                    endClassind = line.indexOf("/"+namesClas);
+                    if (startClassind != -1 && endClassind==-1) {
                         writeClass = true;
                         break;
                     }
@@ -69,24 +85,6 @@ public class ParserForFormula1 {
             System.out.print(e.getMessage());
             return  false;
         }
-    }
-
-    public String[] readFromFile()
-    {
-        try(FileReader file = new FileReader(this.fileName); Scanner scan  = new Scanner(file))
-        {
-            String allText = "";
-            while(scan.hasNextLine())
-            {
-                allText = allText.concat(scan.nextLine().trim());
-            }
-            return allText.replaceAll("><", ">@<").split("@");
-        }
-        catch (Exception e) {
-            System.out.print(e.getMessage());
-        }
-
-        return new String[1];
     }
 
 }
