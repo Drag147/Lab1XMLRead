@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" xsi:schemaLocation="https://www.w3schools.com ./Formula 1.xsd" ?>
-<Formula_1>
+<Formula_1 xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com ./Formula1.xsd">
     <Pilots>
         <Personal_pilot_number>2</Personal_pilot_number>
         <Name>Стоффель</Name>

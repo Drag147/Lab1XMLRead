@@ -19,12 +19,12 @@ public class ParserForFormula1 {
     {
         int startClassind, endClassind;
         boolean writeClass = false;
-        try(FileReader file = new FileReader(this.fileName); Scanner scan  = new Scanner(file))
+        try
         {
-            while (scan.hasNextLine())
+            String[] lines = readFromFile();
+            for(String line: lines)
             {
                 boolean tmpBool = writeClass;
-                String line = scan.nextLine().trim();
                 for (String namesClas : namesClass) {
                     startClassind = line.indexOf("<" + namesClas);
                     endClassind = line.indexOf("</" + namesClas);
@@ -71,5 +71,22 @@ public class ParserForFormula1 {
         }
     }
 
+    public String[] readFromFile()
+    {
+        try(FileReader file = new FileReader(this.fileName); Scanner scan  = new Scanner(file))
+        {
+            String allText = "";
+            while(scan.hasNextLine())
+            {
+                allText = allText.concat(scan.nextLine().trim());
+            }
+            return allText.replaceAll("><", ">@<").split("@");
+        }
+        catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+
+        return new String[1];
+    }
 
 }

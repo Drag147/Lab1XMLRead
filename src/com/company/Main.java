@@ -22,7 +22,7 @@ public class Main {
     public static void mainM ()
     {
         Formula1 formula1 = new Formula1();
-        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml");//"Formula 1 Big.xml");
+        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1 one line.xml");//"Formula 1 Big.xml");
 
         try{
             if(parserForFormula1.myParseFileXML(formula1))
@@ -33,7 +33,7 @@ public class Main {
 
                 System.out.println();
 
-                try(FileWriter fileWR = new FileWriter("JsonExport.json"))
+                /*try(FileWriter fileWR = new FileWriter("JsonExport.json"))
                 {
                     String json = formula1.getJSON();
                     fileWR.write(json);
@@ -42,7 +42,7 @@ public class Main {
                 }catch (Exception e)
                 {
                     System.out.println(e.getMessage());
-                }
+                }*/
             }
         }
         catch (Exception e)

@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0"?>
+<xs:schema xmlns="https://www.w3schools.com"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           elementFormDefault="qualified">
     <xs:element name="Formula_1">
         <xs:complexType>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
