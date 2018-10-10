@@ -1,19 +1,15 @@
-package formula1;
+package parsers;
 
+import formula1.Formula1;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 
-import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -31,6 +27,11 @@ public class ParserXMLForFormula1 {
     public ParserXMLForFormula1(String fileName, int LineCount)
     {
         this.fileName = fileName; this.Lines = LineCount;
+    }
+
+    public ParserXMLForFormula1(String fileName)
+    {
+        this.fileName = fileName; this.Lines = 2;
     }
 
     public boolean myParseFileXML(Formula1 formula1)

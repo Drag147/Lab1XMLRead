@@ -10,7 +10,7 @@ public class Formula1 {
 
     private List<Bolids> bolidsList = new LinkedList<>();
 
-    boolean addNewPilots(List<String> params) {
+    public boolean addNewPilots(List<String> params) {
         try {
             Pilots newPilot = new Pilots(Short.parseShort(params.get(0)), params.get(1),
                     params.get(2), new SimpleDateFormat("yyyy-dd-mm").parse(params.get(3)));
@@ -24,7 +24,7 @@ public class Formula1 {
         }
     }
 
-    boolean addNewBolids(List<String> params) {
+    public boolean addNewBolids(List<String> params) {
         try {
             Bolids newBolid = new Bolids(params.get(0), params.get(1), params.get(2),
                     new SimpleDateFormat("yyyy").parse(params.get(3)));
