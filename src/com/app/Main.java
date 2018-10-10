@@ -1,7 +1,7 @@
 package com.app;
 
 import formula1.Formula1;
-import formula1.ParserForFormula1;
+import formula1.ParserXMLForFormula1;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -23,9 +23,9 @@ public class Main {
     private static void mainM ()
     {
         Formula1 formula1 = new Formula1();
-        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml", 2);//"Formula 1 Big.xml", 1);////
+        ParserXMLForFormula1 parserXMLForFormula1 = new ParserXMLForFormula1("./Resources/Formula 1.xml", 2);//"Formula 1 Big.xml", 1);////
         try{
-            if(parserForFormula1.myParseFileXML(formula1))
+            if(parserXMLForFormula1.parseDOM(formula1))
             {
                 //System.out.println("Размер P: " + formula1.getSizeP());
                 //System.out.println("Размер B: " + formula1.getSizeB());

@@ -1,16 +1,16 @@
 package formula1;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.LinkedList;
 
 public class Formula1 {
 
-    private LinkedList<Pilots> pilotsList = new LinkedList<Pilots>();
+    private List<Pilots> pilotsList = new LinkedList<>();
 
-    private LinkedList<Bolids> bolidsList = new LinkedList<Bolids>();
+    private List<Bolids> bolidsList = new LinkedList<>();
 
-    public boolean addNewPilots(ArrayList<String> params) {
+    boolean addNewPilots(List<String> params) {
         try {
             Pilots newPilot = new Pilots(Short.parseShort(params.get(0)), params.get(1),
                     params.get(2), new SimpleDateFormat("yyyy-dd-mm").parse(params.get(3)));
@@ -24,7 +24,7 @@ public class Formula1 {
         }
     }
 
-    public boolean addNewBolids(ArrayList<String> params) {
+    boolean addNewBolids(List<String> params) {
         try {
             Bolids newBolid = new Bolids(params.get(0), params.get(1), params.get(2),
                     new SimpleDateFormat("yyyy").parse(params.get(3)));
@@ -80,7 +80,7 @@ public class Formula1 {
         for(Pilots pilots: pilotsList)
         {
             json = json.concat(pilots.getJSONstring());
-            if(pilotsList.getLast()!=pilots)
+            if(pilotsList.get(pilotsList.size()-1)!=pilots)
             {
                 json += ",";
             }
@@ -89,7 +89,7 @@ public class Formula1 {
         for(Bolids bolids: bolidsList)
         {
             json = json.concat(bolids.getJSONstring());
-            if(bolidsList.getLast()!=bolids)
+            if(bolidsList.get(bolidsList.size()-1)!=bolids)
             {
                 json += ",";
             }
