@@ -1,4 +1,4 @@
-package Formula1;
+package formula1;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -46,37 +46,5 @@ public class Pilots {
 //                "\t\t\t\"Date_of_birth\": \"" + new SimpleDateFormat("yyyy-mm-dd").format(this.DateBirthDay) + "\"\n\t\t}";
         return "{\"Personal_pilot_number\": \""+ PersonalPilotNumber +"\",\"Name\": \"" + Name + "\",\"Surname\": \"" + Surname +
                 "\",\"Date_of_birth\": \"" + new SimpleDateFormat("yyyy-mm-dd").format(this.DateBirthDay) + "\"}";
-    }
-
-    public short getPersonalPilotNumber() {
-        return PersonalPilotNumber;
-    }
-
-    public void setPersonalPilotNumber(byte personalPilotNumber) {
-        PersonalPilotNumber = personalPilotNumber;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getSurname() {
-        return Surname;
-    }
-
-    public void setSurname(String surname) {
-        Surname = surname;
-    }
-
-    public Date getDateBirthDay() {
-        return DateBirthDay;
-    }
-
-    public void setDateBirthDay(Date dateBirthDay) {
-        DateBirthDay = dateBirthDay;
     }
 }

@@ -1,7 +1,7 @@
-package com.company;
+package com.app;
 
-import Formula1.Formula1;
-import Formula1.ParserForFormula1;
+import formula1.Formula1;
+import formula1.ParserForFormula1;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -56,7 +56,7 @@ public class Main {
     {
         try (FileWriter fileWriter = new FileWriter("Formula 1 Big.xml"))
         {
-            fileWriter.write("<Formula_1 xmlns=\"https://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"https://www.w3schools.com ./Formula1.xsd\">");
+            fileWriter.write("<Formula_1 xmlns=\"https://www.w3schools.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"https://www.w3schools.com ./formula1.xsd\">");
             for(int i = 0; i < 1400000; i++)
             {
                 fileWriter.append("<Pilots><Personal_pilot_number>2</Personal_pilot_number><Name>Стоффель</Name>" +

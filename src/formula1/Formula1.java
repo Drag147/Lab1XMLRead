@@ -1,4 +1,4 @@
-package Formula1;
+package formula1;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
