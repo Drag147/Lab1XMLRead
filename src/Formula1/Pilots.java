@@ -41,9 +41,11 @@ public class Pilots {
 
     public String getJSONstring()
     {
-        return "\t\t{\n" +"\t\t\t\"Personal_pilot_number\": \""+ PersonalPilotNumber +"\",\n" +
-                "\t\t\t\"Name\": \"" + Name + "\",\n" +"\t\t\t\"Surname\": \"" + Surname + "\",\n" +
-                "\t\t\t\"Date_of_birth\": \"" + new SimpleDateFormat("yyyy-mm-dd").format(this.DateBirthDay) + "\"\n\t\t}";
+//        return "\t\t{\n" +"\t\t\t\"Personal_pilot_number\": \""+ PersonalPilotNumber +"\",\n" +
+//                "\t\t\t\"Name\": \"" + Name + "\",\n" +"\t\t\t\"Surname\": \"" + Surname + "\",\n" +
+//                "\t\t\t\"Date_of_birth\": \"" + new SimpleDateFormat("yyyy-mm-dd").format(this.DateBirthDay) + "\"\n\t\t}";
+        return "{\"Personal_pilot_number\": \""+ PersonalPilotNumber +"\",\"Name\": \"" + Name + "\",\"Surname\": \"" + Surname +
+                "\",\"Date_of_birth\": \"" + new SimpleDateFormat("yyyy-mm-dd").format(this.DateBirthDay) + "\"}";
     }
 
     public short getPersonalPilotNumber() {

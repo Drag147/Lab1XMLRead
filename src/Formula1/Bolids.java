@@ -39,9 +39,8 @@ public class Bolids {
 
     public String getJSONstring()
     {
-        return "\t\t{\n" +"\t\t\t\"Name_bolid\": \""+ NameBolid +"\",\n" +
-                "\t\t\t\"Name_engine\": \"" + NameEngine + "\",\n" +"\t\t\t\"Name_chassis\": \"" + NameChassis + "\",\n" +
-                "\t\t\t\"Year_bolid\": \"" + new SimpleDateFormat("yyyy").format(this.YearBolid) + "\"\n\t\t}";
+        return "{\"Name_bolid\": \""+ NameBolid +"\",\"Name_engine\": \"" + NameEngine + "\",\"Name_chassis\": \"" + NameChassis + "\",\"Year_bolid\": \""
+                + new SimpleDateFormat("yyyy").format(this.YearBolid) + "\"}";
     }
 
     public void setNameBolid(String nameBolid) {

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6afbd5c2-253e-48d0-8f78-782895aa2c2d" name="Default Changelist" comment="Парсер для любой XML изменённый">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1XMLRead/Formula1/Formula1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1XMLRead/Formula1/Formula1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1XMLRead/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonExport.json" beforeDir="false" afterPath="$PROJECT_DIR$/JsonExport.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formula1/Bolids.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formula1/Bolids.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Formula1/Formula1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formula1/Formula1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Formula1/ParserForFormula1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formula1/ParserForFormula1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formula1/Pilots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formula1/Pilots.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -115,33 +116,42 @@
     <session id="-751584873">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="5" />
+          <entry key="json" value="1" />
+          <entry key="xml" value="1" />
           <entry key="xsd" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="5" />
+          <entry key="JSON" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1193" />
+          <entry key="gitignore" value="2" />
+          <entry key="java" value="1438" />
           <entry key="txt" value="15" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1193" />
-          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="JAVA" value="1438" />
+          <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -152,11 +162,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="287">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Gen#0;class#Main#0" />
@@ -166,15 +176,55 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Formula1/Formula1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <state relative-caret-position="267">
+              <caret line="96" column="22" lean-forward="true" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
               <folding>
+                <element signature="method#addNewPilots#0;class#Formula1#0" />
+                <element signature="method#addNewBolids#0;class#Formula1#0" />
                 <element signature="method#getPilotsInfo#0;class#Formula1#0" />
                 <element signature="method#getBolidsInfo#0;class#Formula1#0" />
-                <element signature="method#getJSON#0;class#Formula1#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Formula1/Pilots.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="47" column="114" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Formula1/Bolids.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="42" column="78" lean-forward="true" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JsonExport.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Formula1/ParserForFormula1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,16 +267,17 @@
         <option value="$PROJECT_DIR$/Resources/Grand prix.xml" />
         <option value="$PROJECT_DIR$/Resources/Pilots.xml" />
         <option value="$PROJECT_DIR$/Resources/Formula 1.xsd" />
-        <option value="$PROJECT_DIR$/src/Formula1/Pilots.java" />
-        <option value="$PROJECT_DIR$/src/Formula1/Bolids.java" />
         <option value="$PROJECT_DIR$/JsonExport.json" />
         <option value="$PROJECT_DIR$/Resources/Formula 1 Big.xml" />
         <option value="$PROJECT_DIR$/Resources/Formula1.xsd" />
         <option value="$PROJECT_DIR$/Resources/Formula 1.xml" />
         <option value="$PROJECT_DIR$/Resources/Formula 1 one line.xml" />
-        <option value="$PROJECT_DIR$/src/Formula1/Formula1.java" />
         <option value="$PROJECT_DIR$/src/Formula1/ParserForFormula1.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/Formula1/Pilots.java" />
+        <option value="$PROJECT_DIR$/src/Formula1/Bolids.java" />
+        <option value="$PROJECT_DIR$/src/Formula1/Formula1.java" />
       </list>
     </option>
   </component>
@@ -242,6 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,12 +301,22 @@
               <item name="Lab1XMLRead" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab1XMLRead" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Lab1XMLRead" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab1XMLRead" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab1XMLRead" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab1XMLRead" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Formula1" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,9 +615,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.2218845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.22654584" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.20744681" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -564,7 +627,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.502439" side_tool="true" weight="0.20744681" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5672131" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5661605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -696,13 +759,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/Resources/Bolids.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -718,22 +775,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/description.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formula1/Bolids.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Formula 1 Big.xml" />
-    <entry file="file://$PROJECT_DIR$/src/Formula1/Pilots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formula 1 Big.xml" />
     <entry file="file://$PROJECT_DIR$/Resources/Pilots.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -741,16 +783,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Formula 1.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="74" lean-forward="true" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Formula 1.xsd" />
     <entry file="file://$PROJECT_DIR$/Resources/Formula 1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -775,13 +808,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="1609" selection-start-line="1609" selection-end-line="1609" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Scanner.java" />
     <entry file="file://$PROJECT_DIR$/Resources/Formula 1 one line.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -789,9 +816,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formula 1 Big.xml">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Formula1/ParserForFormula1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
+        <state relative-caret-position="341">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -806,26 +843,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formula1/Formula1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="method#getPilotsInfo#0;class#Formula1#0" />
-            <element signature="method#getBolidsInfo#0;class#Formula1#0" />
-            <element signature="method#getJSON#0;class#Formula1#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="287">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Gen#0;class#Main#0" />
             <element signature="method#ReadDOM#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formula1/Pilots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="47" column="114" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formula1/Bolids.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="42" column="78" lean-forward="true" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formula1/Formula1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="96" column="22" lean-forward="true" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+          <folding>
+            <element signature="method#addNewPilots#0;class#Formula1#0" />
+            <element signature="method#addNewBolids#0;class#Formula1#0" />
+            <element signature="method#getPilotsInfo#0;class#Formula1#0" />
+            <element signature="method#getBolidsInfo#0;class#Formula1#0" />
           </folding>
         </state>
       </provider>

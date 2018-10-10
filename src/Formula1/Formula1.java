@@ -75,26 +75,26 @@ public class Formula1 {
 
     public String getJSON()
     {
-        String json = "{\n\t\"Formula_1\": {\n\t\"Pilots\": [\n";
+        String json = "{\"Formula_1\": {\"Pilots\": [";
 
         for(Pilots pilots: pilotsList)
         {
             json = json.concat(pilots.getJSONstring());
             if(pilotsList.getLast()!=pilots)
             {
-                json += ",\n";
+                json += ",";
             }
         }
-        json += "\n\t  ],\n\t\t\"Bolids\": [\n";
+        json += "],\"Bolids\": [";
         for(Bolids bolids: bolidsList)
         {
             json = json.concat(bolids.getJSONstring());
             if(bolidsList.getLast()!=bolids)
             {
-                json += ",\n";
+                json += ",";
             }
         }
-        json += "\n\t  ]\n\t}\n}";
+        json += "]}}";
 
         return  json;
     }

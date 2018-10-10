@@ -23,7 +23,7 @@ public class Main {
     private static void mainM ()
     {
         Formula1 formula1 = new Formula1();
-        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml", 2);//"Formula 1 Big.xml", 1);//
+        ParserForFormula1 parserForFormula1 = new ParserForFormula1("./Resources/Formula 1.xml", 2);//"Formula 1 Big.xml", 1);////
         try{
             if(parserForFormula1.myParseFileXML(formula1))
             {
