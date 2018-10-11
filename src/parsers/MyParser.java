@@ -1,33 +1,20 @@
 package parsers;
 
 import formula1.Formula1;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
-import javax.xml.XMLConstants;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ParserXMLForFormula1 {
+public class MyParser {
     private String fileName;
     private String[] namesClass = {"Pilots", "Bolids", "Teams", "Grand_prix", "Results_qualification", "Results_race"};
     private int Lines;
 
     private List<String> paramsClass = new LinkedList<>();
 
-    public ParserXMLForFormula1(String fileName, int LineCount)
+    public MyParser(String fileName, int LineCount)
     {
         this.fileName = fileName; this.Lines = LineCount;
     }

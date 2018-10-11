@@ -1,13 +1,9 @@
 package com.app;
 
 import formula1.Formula1;
-import parsers.ParserXMLForFormula1;
 import parsers.MySAXParser;
 import parsers.MyDOMParser;
 
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-import java.io.File;
 import java.io.FileWriter;
 
 public class Main {
@@ -15,14 +11,19 @@ public class Main {
     public static void main(String[] args)
     {
         Formula1 formula1 = new Formula1();
+
+
         String fileXml1 = "Resources/Formula 1.xml";
-        String fileXml2 = "./Resources/Formula 1 one line.xml";
-        String fileXsd1 = "Resources/Formula1.xsd";
+        String fileXml2 = "Resources/Formula 1 one line.xml";
         //String file3 = "Formula 1 Big.xml";
+
+        String fileXsd1 = "Resources/Formula1.xsd";
+
         mainSAX(formula1, fileXml1, fileXsd1);
         //mainDOM(formula1, fileXml2, fileXsd1);
-        //toJson(formula1, file2);
-        //Gen();
+
+        String fileNameJsonExport = "JsonExport.json";
+        toJson(formula1, fileNameJsonExport);
     }
 
     private static void mainSAX (Formula1 formula1, String fileNameXml, String fileNameXsd){
@@ -65,8 +66,8 @@ public class Main {
         }
     }
 
-    public static void toJson(Formula1 formula1) {
-        try(FileWriter fileWR = new FileWriter("JsonExport.json"))
+    private static void toJson(Formula1 formula1, String fileNameJsonExport) {
+        try(FileWriter fileWR = new FileWriter(fileNameJsonExport))
         {
             String json = formula1.getJSON();
             fileWR.write(json);
