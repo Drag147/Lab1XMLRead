@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6afbd5c2-253e-48d0-8f78-782895aa2c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonExport.json" beforeDir="false" afterPath="$PROJECT_DIR$/JsonExport.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/ParserXMLForFormula1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/MyParser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +51,7 @@
     <session id="-1982360406">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -64,10 +62,11 @@
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,11 +74,11 @@
           <entry key="Bolids" value="1" />
           <entry key="Comands" value="1" />
           <entry key="class" value="1" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="html" value="1" />
           <entry key="java" value="62" />
-          <entry key="json" value="8" />
-          <entry key="xml" value="73" />
+          <entry key="json" value="9" />
+          <entry key="xml" value="74" />
           <entry key="xsd" value="15" />
         </counts>
       </usages-collector>
@@ -88,9 +87,9 @@
           <entry key="CLASS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JAVA" value="62" />
-          <entry key="JSON" value="8" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="XML" value="90" />
+          <entry key="JSON" value="9" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="XML" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -98,7 +97,7 @@
           <entry key="dummy" value="17" />
           <entry key="java" value="14286" />
           <entry key="json" value="4" />
-          <entry key="txt" value="874" />
+          <entry key="txt" value="904" />
           <entry key="xml" value="1134" />
           <entry key="xsd" value="398" />
         </counts>
@@ -107,7 +106,7 @@
         <counts>
           <entry key="JAVA" value="14286" />
           <entry key="JSON" value="4" />
-          <entry key="PLAIN_TEXT" value="891" />
+          <entry key="PLAIN_TEXT" value="921" />
           <entry key="XML" value="1532" />
         </counts>
       </usages-collector>
@@ -164,13 +163,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="425">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#Main#0" />
                 <element signature="method#mainSAX#0;class#Main#0" />
-                <element signature="method#mainMDOM#0;class#Main#0" />
                 <element signature="method#toJson#0;class#Main#0" />
                 <element signature="method#Gen#0;class#Main#0" />
               </folding>
@@ -217,7 +215,6 @@
         <option value="$PROJECT_DIR$/Resources/Formula 1.xsd" />
         <option value="$PROJECT_DIR$/Resources/Formula 1 Big.xml" />
         <option value="$PROJECT_DIR$/src/Formula1/ParserForFormula1.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/Formula1/Pilots.java" />
         <option value="$PROJECT_DIR$/src/Formula1/Bolids.java" />
@@ -236,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/parsers/MyParser.java" />
         <option value="$PROJECT_DIR$/src/com/app/Main.java" />
         <option value="$PROJECT_DIR$/JsonExport.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -251,6 +249,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,13 +267,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539290736253" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539290929779" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -574,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539290266413</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Update Main.java JsonExport">
+      <created>1539290756670</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1539290756670</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -590,7 +595,7 @@
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967213" visible="true" weight="0.22796352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967213" visible="true" weight="0.23176292" />
       <window_info id="Structure" order="1" sideWeight="0.5032787" side_tool="true" weight="0.22492401" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -678,7 +683,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Teams.xml" />
     <MESSAGE value="Add Grand prix.xml" />
     <MESSAGE value="Add Result race.xml" />
     <MESSAGE value="Add Result qualification.xml" />
@@ -703,7 +707,8 @@
     <MESSAGE value="SAX Parsing and validate XML" />
     <MESSAGE value="DOM parsing is WORK and Validating" />
     <MESSAGE value="SAX parsing is WORK and Validating" />
-    <option name="LAST_COMMIT_MESSAGE" value="SAX parsing is WORK and Validating" />
+    <MESSAGE value="Update Main.java JsonExport" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Main.java JsonExport" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
@@ -779,7 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Formula1.xsd" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Scanner.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/formula1/Pilots.java">
@@ -806,18 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formula 1 Big.xml" />
     <entry file="file://$PROJECT_DIR$/Resources/Formula1.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -905,20 +901,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JsonExport.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="238">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formula 1 Big.xml">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="425">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#Main#0" />
             <element signature="method#mainSAX#0;class#Main#0" />
-            <element signature="method#mainMDOM#0;class#Main#0" />
             <element signature="method#toJson#0;class#Main#0" />
             <element signature="method#Gen#0;class#Main#0" />
           </folding>
