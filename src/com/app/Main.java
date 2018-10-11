@@ -16,39 +16,28 @@ public class Main {
     {
         Formula1 formula1 = new Formula1();
         String fileXml1 = "Resources/Formula 1.xml";
-        //String fileXml2 = "./Resources/Formula 1 one line.xml";
+        String fileXml2 = "./Resources/Formula 1 one line.xml";
         String fileXsd1 = "Resources/Formula1.xsd";
         //String file3 = "Formula 1 Big.xml";
-        //mainSAX(formula1, file1);
-        mainDOM(formula1, fileXml1, fileXsd1);
+        mainSAX(formula1, fileXml1, fileXsd1);
+        //mainDOM(formula1, fileXml2, fileXsd1);
         //toJson(formula1, file2);
         //Gen();
     }
 
-    private static void mainSAX (Formula1 formula1, String fileName){
+    private static void mainSAX (Formula1 formula1, String fileNameXml, String fileNameXsd){
 
         try {
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            SAXParser parser = factory.newSAXParser();
+            MySAXParser saxP = new MySAXParser(formula1, fileNameXml, fileNameXsd);
+            saxP.inizializate();
+            saxP.parse();
 
-            factory.setValidating(true);
+            //System.out.println("Размер P: " + formula1.getSizeP());
+            //System.out.println("Размер B: " + formula1.getSizeB());
+            System.out.println(formula1.getPilotsInfo());
+            System.out.println(formula1.getBolidsInfo());
 
-            if(factory.isValidating()) {
-
-                MySAXParser saxP = new MySAXParser(formula1);
-
-                parser.parse(new File(fileName), saxP);
-
-                //System.out.println("Размер P: " + formula1.getSizeP());
-                //System.out.println("Размер B: " + formula1.getSizeB());
-                System.out.println(formula1.getPilotsInfo());
-                System.out.println(formula1.getBolidsInfo());
-
-                System.out.println();
-            }
-            else{
-                System.out.println("NO VALIDATING");
-            }
+            System.out.println();
         }
         catch (Exception e)
         {
