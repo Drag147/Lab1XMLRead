@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<xs:schema xmlns="https://www.w3schools.com"
+<xs:schema xmlns="Formula1"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="https://www.w3schools.com"
+           targetNamespace="Formula1"
            elementFormDefault="qualified">
     <xs:element name="Formula_1">
         <xs:complexType>

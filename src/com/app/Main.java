@@ -3,25 +3,24 @@ package com.app;
 import formula1.Formula1;
 import parsers.ParserXMLForFormula1;
 import parsers.MySAXParser;
+import parsers.MyDOMParser;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
 import java.io.File;
 import java.io.FileWriter;
-import java.text.Normalizer;
 
 public class Main {
 
     public static void main(String[] args)
     {
         Formula1 formula1 = new Formula1();
-        String file1 = "./Resources/Formula 1.xml";
-        String file2 = "./Resources/Formula 1 one line.xml";
-        String file3 = "Formula 1 Big.xml";
-        mainSAX(formula1, file1);
-        //mainMDOM(formula1, file2);
+        String fileXml1 = "Resources/Formula 1.xml";
+        //String fileXml2 = "./Resources/Formula 1 one line.xml";
+        String fileXsd1 = "Resources/Formula1.xsd";
+        //String file3 = "Formula 1 Big.xml";
+        //mainSAX(formula1, file1);
+        mainDOM(formula1, fileXml1, fileXsd1);
         //toJson(formula1, file2);
         //Gen();
     }
@@ -57,11 +56,11 @@ public class Main {
         }
     }
 
-    private static void mainMDOM (Formula1 formula1, String fileName)
+    private static void mainDOM (Formula1 formula1, String fileNameXml, String fileNameXsd)
     {
-        ParserXMLForFormula1 parserXMLForFormula1 = new ParserXMLForFormula1(fileName);
+        MyDOMParser parserXMLForFormula1 = new MyDOMParser(fileNameXml, fileNameXsd);
         try{
-            if(parserXMLForFormula1.parseDOM(formula1))
+            if(parserXMLForFormula1.parse(formula1))
             {
                 //System.out.println("Размер P: " + formula1.getSizeP());
                 //System.out.println("Размер B: " + formula1.getSizeB());

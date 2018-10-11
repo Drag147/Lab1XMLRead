@@ -7,9 +7,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,11 +30,6 @@ public class ParserXMLForFormula1 {
     public ParserXMLForFormula1(String fileName, int LineCount)
     {
         this.fileName = fileName; this.Lines = LineCount;
-    }
-
-    public ParserXMLForFormula1(String fileName)
-    {
-        this.fileName = fileName; this.Lines = 2;
     }
 
     public boolean myParseFileXML(Formula1 formula1)
@@ -103,69 +101,4 @@ public class ParserXMLForFormula1 {
         }
     }
 
-    public boolean parseDOM(Formula1 formula)
-    {
-        try
-        {
-            File fXmlFile = new File(this.fileName);
-
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            factory.setValidating(true);
-
-            if(factory.isValidating()) {
-                DocumentBuilder builder = factory.newDocumentBuilder();
-
-                Document doc = builder.parse(fXmlFile);
-                doc.getDocumentElement().normalize();
-
-                for (String nameClass : namesClass) {
-                    NodeList listNodes = doc.getElementsByTagName(nameClass);
-
-                    for (int i = 0; i < listNodes.getLength(); i++) {
-                        Node node = listNodes.item(i);
-
-                        if (node.getNodeType() == Node.ELEMENT_NODE) {
-                            Element element = (Element) node;
-                            //System.out.println("Node name: " + node.getNodeName());
-                            switch (element.getNodeName()) {
-                                case "Pilots":
-                                    paramsClass.clear();
-                                    paramsClass.add(element.getElementsByTagName("Personal_pilot_number").item(0).getTextContent());
-                                    paramsClass.add(element.getElementsByTagName("Name").item(0).getTextContent());
-                                    paramsClass.add(element.getElementsByTagName("Surname").item(0).getTextContent());
-                                    paramsClass.add(element.getElementsByTagName("Date_of_birth").item(0).getTextContent());
-                                    formula.addNewPilots(paramsClass);
-//                            System.out.println(element.getElementsByTagName("Personal_pilot_number").item(0).getTextContent());
-//                            System.out.println(element.getElementsByTagName("Name").item(0).getTextContent());
-//                            System.out.println(element.getElementsByTagName("Surname").item(0).getTextContent());
-//                            System.out.println(element.getElementsByTagName("Date_of_birth").item(0).getTextContent());
-                                    break;
-                                case "Bolids":
-                                    paramsClass.clear();
-                                    paramsClass.add(element.getElementsByTagName("Name_bolid").item(0).getTextContent());
-                                    paramsClass.add(element.getElementsByTagName("Name_engine").item(0).getTextContent());
-                                    paramsClass.add(element.getElementsByTagName("Name_chassis").item(0).getTextContent());
-                                    paramsClass.add(element.getElementsByTagName("Year_bolid").item(0).getTextContent());
-                                    formula.addNewBolids(paramsClass);
-//                                System.out.println(element.getElementsByTagName("Name_bolid").item(0).getTextContent());
-//                                System.out.println(element.getElementsByTagName("Name_engine").item(0).getTextContent());
-//                                System.out.println(element.getElementsByTagName("Name_chassis").item(0).getTextContent());
-//                                System.out.println(element.getElementsByTagName("Year_bolid").item(0).getTextContent());
-                                    break;
-                            }
-//                        System.out.println();
-                        }
-                    }
-                }
-                return true;
-            }
-            return  false;
-
-        } catch (ParserConfigurationException | SAXException
-                | IOException ex)
-        {
-            ex.printStackTrace();
-        }
-        return false;
-    }
 }
