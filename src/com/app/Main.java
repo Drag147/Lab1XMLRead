@@ -19,8 +19,8 @@ public class Main {
 
         String fileXsd1 = "Resources/Formula1.xsd";
 
-        //mainSAX(formula1, fileXml1, fileXsd1);
-        mainDOM(formula1, fileXml1, fileXsd1);
+        mainSAX(formula1, fileXml1, fileXsd1);
+        //mainDOM(formula1, fileXml1, fileXsd1);
 
         String fileNameJsonExport = "JsonExport.json";
         toJson(formula1, fileNameJsonExport);
@@ -35,8 +35,8 @@ public class Main {
 
             //System.out.println("Размер P: " + formula1.getSizeP());
             //System.out.println("Размер B: " + formula1.getSizeB());
-            System.out.println(formula1.getPilotsInfo());
-            System.out.println(formula1.getBolidsInfo());
+            System.out.println(formula1.pilotsToString());
+            System.out.println(formula1.bolidsToString());
 
             System.out.println();
         }
@@ -48,14 +48,14 @@ public class Main {
 
     private static void mainDOM (Formula1 formula1, String fileNameXml, String fileNameXsd)
     {
-        MyDOMParser parserXMLForFormula1 = new MyDOMParser(fileNameXml, fileNameXsd);
+        MyDOMParser parserXMLForFormula1 = new MyDOMParser(formula1, fileNameXml, fileNameXsd);
         try{
             if(parserXMLForFormula1.parse(formula1))
             {
                 //System.out.println("Размер P: " + formula1.getSizeP());
                 //System.out.println("Размер B: " + formula1.getSizeB());
-                System.out.println(formula1.getPilotsInfo());
-                System.out.println(formula1.getBolidsInfo());
+                System.out.println(formula1.pilotsToString());
+                System.out.println(formula1.bolidsToString());
 
                 System.out.println();
             }
@@ -69,7 +69,7 @@ public class Main {
     private static void toJson(Formula1 formula1, String fileNameJsonExport) {
         try(FileWriter fileWR = new FileWriter(fileNameJsonExport))
         {
-            String json = formula1.getJson();
+            String json = formula1.toJson();
             fileWR.write(json);
             fileWR.flush();
             System.out.println("JSON записан в файл JsonExport.json");

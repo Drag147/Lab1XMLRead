@@ -13,9 +13,7 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class MySAXParser extends DefaultHandler {
 
@@ -26,17 +24,17 @@ public class MySAXParser extends DefaultHandler {
     private SAXParserFactory factory = SAXParserFactory.newInstance();
 
     private boolean writeParams = false;
-    private String nowTag = "";
-    private List<String> params = new LinkedList<>();
-    private List<String> namesClass = Arrays.asList("Pilots", "Bolids", "Teams",
-            "Grand_prix", "Results_qualification", "Results_race");
+    private String nowField = "";
+    private String nowClass = "";
+    private HashMap<String, String> params = new HashMap<>();
+    private List<String> namesClass;
 
 
     public MySAXParser(Formula1 formula1, String fileNameXml, String fileNameXsd) {
         this.formula1 = formula1;
         this.fileNameXml = fileNameXml;
         this.fileNameXsd = fileNameXsd;
-
+        this.namesClass = formula1.getClassNames();
     }
 
     public boolean inizializate() throws SAXException {
@@ -70,30 +68,35 @@ public class MySAXParser extends DefaultHandler {
     public void startElement(String namespaceURI, String localName, String qName, Attributes atts){
         if(namesClass.contains(qName)){
             //это класс
-            nowTag = qName;
+            nowClass = qName;
             this.writeParams = true;
+        }
+        else{
+            nowField = qName;
         }
     }
 
     @Override
     public void characters(char[] ch, int start, int length) {
-        if(!nowTag.equals("")) {
-            params.add(new String(ch, start, length));
+        if(this.writeParams) {
+            params.put(nowField, new String(ch, start, length));
         }
     }
 
     @Override
     public void endElement(String namespaceURI, String localName, String qName) {
-        if (qName.equals(nowTag)) {
-            switch (nowTag) {
+        if (qName.equals(nowClass)) {
+            switch (nowClass) {
                 case "Pilots":
-                    formula1.addNewPilots(params);
+                    formula1.addNewPilot(params);
                     break;
                 case "Bolids":
-                    formula1.addNewBolids(params);
+                    formula1.addNewBolid(params);
                     break;
             }
-            nowTag = "";
+            nowClass = "";
+            nowField = "";
+            this.writeParams = false;
             params.clear();
         }
     }

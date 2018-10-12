@@ -1,22 +1,24 @@
 package formula1;
 
-import java.time.LocalDate;
-import java.time.Year;
-import java.time.format.DateTimeFormatter;
+import essence.Bolids;
+import essence.Pilots;
+
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.LinkedList;
 
 public class Formula1 {
 
     private List<Pilots> pilotsList = new LinkedList<>();
-
     private List<Bolids> bolidsList = new LinkedList<>();
 
-    public boolean addNewPilots(List<String> params) {
+    final private List<String> classNames = Arrays.asList("Pilots", "Bolids", "Teams",
+            "Grand_prix", "Results_qualification", "Results_race");
+
+    public boolean addNewPilot(HashMap<String, String> params) {
         try {
-            Pilots newPilot = new Pilots(Short.parseShort(params.get(0)), params.get(1),
-                    params.get(2), LocalDate.parse(params.get(3), DateTimeFormatter.ofPattern("yyyy-mm-dd")));
-            pilotsList.add(newPilot);
+            pilotsList.add(new Pilots(params));
             return true;
         }
         catch (Exception e)
@@ -26,30 +28,19 @@ public class Formula1 {
         }
     }
 
-    public boolean addNewBolids(List<String> params) {
+    public boolean addNewBolid(HashMap<String, String> params) {
         try {
-            Bolids newBolid = new Bolids(params.get(0), params.get(1), params.get(2),
-                     Year.parse(params.get(3)));
-            bolidsList.add(newBolid);
+            bolidsList.add(new Bolids(params));
             return true;
         }
         catch (Exception e)
         {
-            System.out.println(e.getMessage());
+            System.out.println("Error in addNewBolid: " +  e.getMessage());
             return  false;
         }
     }
 
-    public int getSizeP()
-    {
-        return pilotsList.size();
-    }
-    public int getSizeB()
-    {
-        return bolidsList.size();
-    }
-
-    public String getPilotsInfo()
+    public String pilotsToString()
     {
         String resString = "Всего пилотов: " + pilotsList.size()+"\n";
         int i = 1;
@@ -62,7 +53,7 @@ public class Formula1 {
         return resString;
     }
 
-    public String getBolidsInfo()
+    public String bolidsToString()
     {
         String resString = "Всего болидов: " + bolidsList.size()+"\n";
         int i = 1;
@@ -75,13 +66,13 @@ public class Formula1 {
         return resString;
     }
 
-    public String getJson()
+    public String toJson()
     {
         String json = "{\"Formula_1\": {\"Pilots\": [";
 
         for(Pilots pilots: pilotsList)
         {
-            json = json.concat(pilots.getJonString());
+            json = json.concat(pilots.toJson());
             if(pilotsList.get(pilotsList.size()-1)!=pilots)
             {
                 json += ",";
@@ -90,7 +81,7 @@ public class Formula1 {
         json += "],\"Bolids\": [";
         for(Bolids bolids: bolidsList)
         {
-            json = json.concat(bolids.getJonString());
+            json = json.concat(bolids.toJson());
             if(bolidsList.get(bolidsList.size()-1)!=bolids)
             {
                 json += ",";
@@ -100,4 +91,6 @@ public class Formula1 {
 
         return  json;
     }
+
+    public List<String> getClassNames(){return classNames;}
 }
