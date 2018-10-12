@@ -19,8 +19,8 @@ public class Main {
 
         String fileXsd1 = "Resources/Formula1.xsd";
 
-        mainSAX(formula1, fileXml1, fileXsd1);
-        //mainDOM(formula1, fileXml2, fileXsd1);
+        //mainSAX(formula1, fileXml1, fileXsd1);
+        mainDOM(formula1, fileXml1, fileXsd1);
 
         String fileNameJsonExport = "JsonExport.json";
         toJson(formula1, fileNameJsonExport);
@@ -69,7 +69,7 @@ public class Main {
     private static void toJson(Formula1 formula1, String fileNameJsonExport) {
         try(FileWriter fileWR = new FileWriter(fileNameJsonExport))
         {
-            String json = formula1.getJSON();
+            String json = formula1.getJson();
             fileWR.write(json);
             fileWR.flush();
             System.out.println("JSON записан в файл JsonExport.json");

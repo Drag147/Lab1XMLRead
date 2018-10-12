@@ -1,6 +1,8 @@
 package formula1;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Year;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.LinkedList;
 
@@ -13,7 +15,7 @@ public class Formula1 {
     public boolean addNewPilots(List<String> params) {
         try {
             Pilots newPilot = new Pilots(Short.parseShort(params.get(0)), params.get(1),
-                    params.get(2), new SimpleDateFormat("yyyy-dd-mm").parse(params.get(3)));
+                    params.get(2), LocalDate.parse(params.get(3), DateTimeFormatter.ofPattern("yyyy-mm-dd")));
             pilotsList.add(newPilot);
             return true;
         }
@@ -27,7 +29,7 @@ public class Formula1 {
     public boolean addNewBolids(List<String> params) {
         try {
             Bolids newBolid = new Bolids(params.get(0), params.get(1), params.get(2),
-                    new SimpleDateFormat("yyyy").parse(params.get(3)));
+                     Year.parse(params.get(3)));
             bolidsList.add(newBolid);
             return true;
         }
@@ -73,13 +75,13 @@ public class Formula1 {
         return resString;
     }
 
-    public String getJSON()
+    public String getJson()
     {
         String json = "{\"Formula_1\": {\"Pilots\": [";
 
         for(Pilots pilots: pilotsList)
         {
-            json = json.concat(pilots.getJSONstring());
+            json = json.concat(pilots.getJonString());
             if(pilotsList.get(pilotsList.size()-1)!=pilots)
             {
                 json += ",";
@@ -88,7 +90,7 @@ public class Formula1 {
         json += "],\"Bolids\": [";
         for(Bolids bolids: bolidsList)
         {
-            json = json.concat(bolids.getJSONstring());
+            json = json.concat(bolids.getJonString());
             if(bolidsList.get(bolidsList.size()-1)!=bolids)
             {
                 json += ",";
